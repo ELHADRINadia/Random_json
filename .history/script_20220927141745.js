@@ -1,11 +1,12 @@
 //----------------------variabales------------
 let id = 0;
 let results = [];
+let listR = [];
 let increment = 1;
 let D = moment().format("YYYY-MM-DD");
 
 function addList() {
-  let inputnom = document.getElementById("nom");
+  let   = document.getElementById("nom");
   let inputsujet = document.getElementById("sujet");
 
   results.push({
@@ -17,15 +18,16 @@ function addList() {
   // console.log("results");
 
   //Creat td
-  var td = document.createElement("td");
-  var td2 = document.createElement("td");
-  var td3 = document.createElement("td");
-  var td4 = document.createElement("td");
-  var tr = document.createElement("tr");
-  var tbody = document.getElementById("tbody");
+  let td = document.createElement("td");
+  let td2 = document.createElement("td");
+  let td3 = document.createElement("td");
+  let td4 = document.createElement("td");
+  let tr = document.createElement("tr");
+  let tbody = document.getElementById("tbody");
 
   //id
   tr.setAttribute("data-id", id);
+
   td.appendChild(document.createTextNode(inputnom.value));
   td2.appendChild(document.createTextNode(inputsujet.value));
   td3.innerHTML = '<i class="fas fa-trash-alt"></i>';
@@ -54,8 +56,8 @@ function getData() {
 
   var randomData = results[Math.floor(Math.random() * results.length)];
   results = results.filter((item) => item.id !== randomData.id);
-// console.log (item);
-  var tirage = Math.floor(Math.random(results) * results.length);
+
+  
 
   //le meme id
   document.querySelector(`[data-id="${randomData.id + 1}"]`).remove();

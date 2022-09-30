@@ -26,6 +26,7 @@ function addList() {
 
   //id
   tr.setAttribute("data-id", id);
+
   td.appendChild(document.createTextNode(inputnom.value));
   td2.appendChild(document.createTextNode(inputsujet.value));
   td3.innerHTML = '<i class="fas fa-trash-alt"></i>';
@@ -54,7 +55,7 @@ function getData() {
 
   var randomData = results[Math.floor(Math.random() * results.length)];
   results = results.filter((item) => item.id !== randomData.id);
-// console.log (item);
+
   var tirage = Math.floor(Math.random(results) * results.length);
 
   //le meme id

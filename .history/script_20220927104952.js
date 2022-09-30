@@ -1,10 +1,12 @@
 //----------------------variabales------------
-let id = 0;
-let results = [];
-let increment = 1;
-let D = moment().format("YYYY-MM-DD");
+var id = 0;
+var results = [];
+var listR = [];
+var increment = 1;
+var D = moment().format("YYYY-MM-DD");
 
 function addList() {
+  // let trlist = document.getElementById("list");
   let inputnom = document.getElementById("nom");
   let inputsujet = document.getElementById("sujet");
 
@@ -26,9 +28,10 @@ function addList() {
 
   //id
   tr.setAttribute("data-id", id);
+
   td.appendChild(document.createTextNode(inputnom.value));
   td2.appendChild(document.createTextNode(inputsujet.value));
-  td3.innerHTML = '<i class="fas fa-trash-alt"></i>';
+  // td3.innerHTML = '<i class="fas fa-trash-alt"></i>';
 
   tr.appendChild(td4);
   tr.appendChild(td);
@@ -54,7 +57,7 @@ function getData() {
 
   var randomData = results[Math.floor(Math.random() * results.length)];
   results = results.filter((item) => item.id !== randomData.id);
-// console.log (item);
+
   var tirage = Math.floor(Math.random(results) * results.length);
 
   //le meme id

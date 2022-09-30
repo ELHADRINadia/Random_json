@@ -54,7 +54,7 @@ function getData() {
 
   var randomData = results[Math.floor(Math.random() * results.length)];
   results = results.filter((item) => item.id !== randomData.id);
-// console.log (item);
+console.log (item)
   var tirage = Math.floor(Math.random(results) * results.length);
 
   //le meme id
